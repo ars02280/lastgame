@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
     private PlayerHealth _playerHealth;
     public Animator animator;
     public float attackDistance = 1;
+    public Transform playerTransform;
 
 
     void Start()
@@ -48,7 +49,7 @@ public class EnemyAI : MonoBehaviour
 
         }
     }
-
+    
 
     public void AttackDamage()
     {
