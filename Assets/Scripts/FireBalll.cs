@@ -34,7 +34,7 @@ public class FireBalll : MonoBehaviour
         var enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
-            enemyHealth.DealDamage(damage);
+            enemyHealth.DealDamageE(damage);
         } 
     }
     

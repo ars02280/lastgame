@@ -22,25 +22,31 @@ public class Explotion : MonoBehaviour
         }
 
     }
-    private void OnTriggerEnter(Collider other)
+    private void ece()
     {
-        var playerHealth = other.GetComponent<PlayerHealth>();
-        if (playerHealth != null)
-        {
-            playerHealth.DealDamage(damage);
-        }
+        
 
-       var enemyHealth = other.GetComponent<EnemyHealth>();
-        if (enemyHealth != null)
-        {
-            enemyHealth.DealDamage(damage);
+       var enemyHealth = GetComponent<EnemyHealth>();
+       if (enemyHealth = null)
+       {
+            // enemyHealth.DealDamageE(damage);
             Debug.Log(3);
-        }
-        else
-        {
+       }
+       else
+       {
             Debug.Log(4);
                 
-        }
+       }
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        var enemy = other.gameObject.GetComponent<EnemyHealth>();
+
+        if (enemy != null)
+        {
+            enemy.DealDamageE(damage);
+        }
     }
 }
